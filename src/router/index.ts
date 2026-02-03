@@ -13,6 +13,11 @@ const router = createRouter({
       name: "sobre.mi",
       component: () => import("../views/SobreMiView.vue"),
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: () => import("../views/NotFound.vue"),
+    },
   ],
 });
 
