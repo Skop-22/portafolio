@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted,onUnmounted,ref } from 'vue'
+import { ref,onMounted } from 'vue'
 import {
   animate,
   stagger,
@@ -12,7 +12,6 @@ const scene=ref<HTMLElement|null>(null)
 const title=ref<HTMLElement|null>(null)
 const subtitle=ref<HTMLElement|null>(null)
 const button=ref<any>(null)
-const orb=ref<HTMLElement|null>(null)
 
 let bounds: DOMRect
 
@@ -44,41 +43,6 @@ onMounted(() => {
   })
 
   bounds=scene.value!.getBoundingClientRect()
-
-  const orbAnim=createAnimatable(orb.value!,{
-    x: 0,
-    y: 0,
-    backgroundColor: 'rgb(164, 255, 79)',
-    ease: 'outExpo',
-    duration: 600
-  })
-
-  const onMouseMove=(e: MouseEvent) => {
-    if(!orbAnim) return;
-
-    const hw=bounds.width/2
-    const hh=bounds.height/2
-
-    const x=utils.clamp(e.clientX-bounds.left-hw,-hw,hw)
-    const y=utils.clamp(e.clientY-bounds.top-hh,-hh,hh)
-
-    const r=utils.mapRange(x,-hw,hw,80,164)
-    const b=utils.mapRange(x,-hw,hw,200,79)
-
-    orbAnim
-      .x(x)
-      .y(y)
-      .backgroundColor([r,255,b])
-  }
-
-  window.addEventListener('mousemove',onMouseMove)
-  window.addEventListener('resize',() => {
-    bounds=scene.value!.getBoundingClientRect()
-  })
-
-  onUnmounted(() => {
-    window.removeEventListener('mousemove',onMouseMove)
-  })
 })
 </script>
 
@@ -88,12 +52,6 @@ onMounted(() => {
     class="relative min-h-screen overflow-hidden flex items-center justify-center
            bg-gradient-to-br from-slate-900 via-black to-slate-800 text-white"
   >
-    <!-- Orbe interactivo -->
-    <div
-      ref="orb"
-      class="absolute w-64 h-64 rounded-full blur-3xl opacity-40 pointer-events-none"
-      style="background: rgb(164,255,79)"
-    />
 
     <div class="text-center relative z-10">
       <h1
