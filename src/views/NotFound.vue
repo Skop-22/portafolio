@@ -17,7 +17,6 @@ const orb=ref<HTMLElement|null>(null)
 let bounds: DOMRect
 
 onMounted(() => {
-  /* ========= TEXTO ========= */
   const { chars }=splitText(title.value!,{ chars: true })
 
   animate(chars,{
@@ -44,7 +43,6 @@ onMounted(() => {
     ease: 'outBack'
   })
 
-  /* ========= ORBE INTERACTIVO ========= */
   bounds=scene.value!.getBoundingClientRect()
 
   const orbAnim=createAnimatable(orb.value!,{
