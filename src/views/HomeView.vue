@@ -1,12 +1,16 @@
 <script lang="ts" setup>
 import Github from '../components/icons/IconGitHub.vue'
 import Mail from '../components/icons/IconMail.vue'
+import ChevronRight from '../components/icons/IconChevronRigth.vue';
+import Header from '../components/HeaderComponent.vue';
+
 </script>
 
 <template>
-  <div className="min-h-screen relative overflow-x-hidden">
+  <div class="min-h-screen relative overflow-x-hidden">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
+    <Header />
 
     <main class="relative z-10 pt-20">
       <section class="relative py-20 lg:py-32 px-4">
