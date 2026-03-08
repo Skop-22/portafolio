@@ -51,14 +51,6 @@
             Volver a la Tierra
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
           </router-link>
-
-          <button
-            @click="reloadPage"
-            class="px-8 py-3 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold rounded-full transition-all flex items-center gap-2"
-          >
-            <RefreshCcw :size="18" />
-            Reintentar Salto
-          </button>
         </div>
       </div>
     </div>
