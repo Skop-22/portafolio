@@ -14,6 +14,11 @@ const router = createRouter({
       component: () => import("../views/SobreMiView.vue"),
     },
     {
+      path: "/certificados",
+      name: "certificados",
+      component: () => import("../views/CertificadosView.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFound.vue"),
