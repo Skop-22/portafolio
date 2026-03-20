@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Code2 from '../components/icons/IconCodeSlash.vue';
+import { Menu,X } from 'lucide-vue-next'
 </script>
 
 <template>
