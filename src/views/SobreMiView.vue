@@ -2,6 +2,7 @@
 import { onMounted,ref } from 'vue'
 import Header from '../components/HeaderComponent.vue'
 import { animate,stagger,splitText } from 'animejs'
+import { Layers,Cpu,Terminal,User } from 'lucide-vue-next'
 
 const title=ref<HTMLElement|null>(null)
 const paragraphs=ref<HTMLElement[]>([])
