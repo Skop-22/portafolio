@@ -84,7 +84,6 @@ const closeModal=() => {
   selectedPdf.value=null
 }
 
-// Tus datos exactos
 const certificatesData=[
   {
     id: 1,
@@ -167,7 +166,6 @@ const statsData=[
   { icon: Star,label: 'Años de estudio',value: '4' }
 ]
 
-// Función para generar una URL segura del PDF
 const getPdfUrl=(pdfPath: string) => {
   return `${pdfPath}#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=1`
 }
@@ -175,7 +173,6 @@ const getPdfUrl=(pdfPath: string) => {
 
 <template>
   <div class="min-h-screen relative overflow-x-hidden">
-    <!-- Fondo con efectos -->
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-red-500/5 blur-[150px] rounded-full z-0"></div>
@@ -235,10 +232,8 @@ const getPdfUrl=(pdfPath: string) => {
               ref="el => certificates.push(el!)"
               class="group relative"
             >
-              <!-- Tarjeta de certificado -->
               <div class="glass rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-500 h-full flex flex-col">
 
-                <!-- Badge de destacado -->
                 <div
                   v-if="cert.featured"
                   class="absolute top-4 right-4 z-10"
@@ -249,7 +244,6 @@ const getPdfUrl=(pdfPath: string) => {
                   </div>
                 </div>
 
-                <!-- Badge PDF -->
                 <div class="absolute top-4 left-4 z-10">
                   <div class="bg-red-500/90 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
                     <FileText class="w-3 h-3" />
