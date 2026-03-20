@@ -1,18 +1,115 @@
 @import "tailwindcss";
-body {
+
+@theme {
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+  --animate-twinkle-mobile: twinkle 3s ease-in-out infinite;
+  --animate-fadeIn: fadeIn 0.3s ease;
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+  }
+
+  .bg-stars-fixed {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+
+  .content-scroll {
+    position: relative;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  object {
+    pointer-events: none;
+  }
+
+  object::-webkit-scrollbar {
+    display: none;
+  }
 }
-.mono {
+
+@layer utilities {
+  .mono {
     font-family: 'Fira Code', monospace;
-}
-.glass {
-    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-.gradient-text {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .gradient-text {
     background: linear-gradient(135deg, #ff2d20 0%, #f05340 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .star-static {
+    animation: var(--animate-twinkle);
+    will-change: opacity, transform;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .fade-in {
+    animation: var(--animate-fadeIn);
+  }
+}
+
+@layer utilities {
+  @media (max-width: 640px) {
+    .star-static {
+      animation: var(--animate-twinkle-mobile);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .star-static {
+      animation: none;
+    }
+    
+    .fade-in {
+      animation: none;
+    }
+  }
 }
