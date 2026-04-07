@@ -11,6 +11,8 @@ import introduccion from '../assets/sertificados/8e1c9c2c-3a58-4818-8903-dc43c6a
 import salud_digital from '../assets/sertificados/a2b4b846-42ab-4295-b0bd-167b73561201_certificado.pdf'
 import finder from '../assets/sertificados/aaef72be-04d6-49fe-ac9e-9264baaff46f_certificado.pdf'
 import administrador_servidores from '../assets/sertificados/c47713e7-6b23-43de-a203-d5e092efa29d_certificado.pdf'
+import trabajo_en_equipo from '../assets/sertificados/f4cae005-0e6b-49be-827e-3dc70eb57d44_certificado.pdf';
+import curador_datos from '../assets/sertificados/ffca408f-4362-41c1-a91b-4589b0d17643_certificado.pdf';
 
 const title=ref<HTMLElement|null>(null)
 const subtitle=ref<HTMLElement|null>(null)
@@ -154,6 +156,26 @@ const certificatesData=[
     pdfPath: administrador_servidores,
     skills: ['linux','Apache'],
     featured: true,
+    fileSize: '2.0 MB',
+    pages: 1
+  },
+  {
+    id: 7,
+    title: 'Trabajo en equipo',
+    issuer: 'Capacítate para el empleo',
+    date: '2021',
+    credentialId: 'F4CAE005-0E6B-49BE-827E-3DC70EB57D44',
+    pdfPath: trabajo_en_equipo,
+    fileSize: '2.0 MB',
+    pages: 1
+  },
+  {
+    id: 7,
+    title: 'Curador de datos',
+    issuer: 'Capacítate para el empleo',
+    date: '2020',
+    credentialId: 'FFCA408F-4362-41C1-A91B-4589B0D17643',
+    pdfPath: curador_datos,
     fileSize: '2.0 MB',
     pages: 1
   }

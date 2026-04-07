@@ -78,7 +78,7 @@ onMounted(() => {
 
                   <div class="flex items-center gap-2 text-red-500 font-semibold uppercase text-sm tracking-wider">
                     <Briefcase class="w-4 h-4" />
-                    Full Stack Developer
+                    Full Stack Developer (Livaur.com)
                   </div>
 
                   <div class="flex items-center gap-2 text-slate-400 text-sm bg-white/5 px-3 py-1 rounded-lg border border-white/10">
@@ -119,6 +119,7 @@ onMounted(() => {
                     <li>• Implementación de sistemas de autenticación segura</li>
                     <li>• Optimización de rendimiento utilizando Redis</li>
                     <li>• Configuración y administración de servidores Linux</li>
+                    <li>• Configuración y administración de Pasarelas de pago (Mercado pago, PayPal)</li>
                     <li>• Implementación de redes VPN y túneles con MikroTik</li>
                   </ul>
                 </div>

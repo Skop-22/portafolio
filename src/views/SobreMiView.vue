@@ -65,7 +65,7 @@ onMounted(() => {
             <div class="w-full md:w-1/3">
               <div
                 ref="image"
-                class="relative group "
+                class="relative group"
               >
                 <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                 <img
@@ -78,6 +78,7 @@ onMounted(() => {
 
             <!-- CONTENIDO -->
             <div class="w-full md:w-2/3 space-y-6">
+
               <div class="inline-flex items-center gap-2 text-red-500 font-bold tracking-widest uppercase text-sm">
                 <User class="w-4 h-4" />
                 Full Stack Developer
@@ -90,35 +91,47 @@ onMounted(() => {
                 Desarrollo aplicaciones completas, de la idea a producción.
               </h2>
 
+              <!-- TEXTO -->
               <p
                 ref="el => paragraphs.push(el!)"
-                class="text-slate-400 text-lg leading-relaxed "
+                class="text-slate-400 text-lg leading-relaxed"
               >
                 Soy desarrollador <span class="text-white font-medium">Full Stack</span> con un fuerte enfoque en arquitectura,
-                eficiencia y mantenibilidad. Me gusta escribir código limpio, bien estructurado y fácil de escalar.
+                eficiencia y mantenibilidad. Me gusta escribir código.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
-                class="text-slate-400 text-lg leading-relaxed "
+                class="text-slate-400 text-lg leading-relaxed"
               >
-                Trabajo tanto en el backend como en el frontend: desarrollo APIs, sistemas de autenticación,
-                lógica de negocio y bases de datos, así como interfaces modernas centradas en la experiencia del usuario.
+                Desarrollo soluciones completas tanto en backend como en frontend: trabajo con
+                <span class="text-white">PHP y Laravel</span> para la lógica de negocio, APIs y bases de datos,
+                y utilizo <span class="text-white">JavaScript, Vue y TypeScript</span> para construir interfaces modernas.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
-                class="text-slate-400 text-lg leading-relaxed "
+                class="text-slate-400 text-lg leading-relaxed"
               >
-                Disfruto optimizar rendimiento, mejorar flujos de trabajo y aplicar buenas prácticas
-                usando Git, GitHub y entornos Linux.
+                Manejo <span class="text-white">PHP a nivel avanzado</span>, y tengo experiencia con
+                <span class="text-white">JavaScript y TypeScript</span>. También he trabajado
+                con <span class="text-white">Apache</span> y entornos Linux para despliegue y configuración de aplicaciones.
+              </p>
+
+              <p
+                ref="el => paragraphs.push(el!)"
+                class="text-slate-400 text-lg leading-relaxed"
+              >
+                Además, cuento con conocimientos en otros lenguajes como
+                <span class="text-white">Python, C y C++</span>, principalmente para reforzar lógica y resolver problemas específicos.
               </p>
 
               <!-- CARDS -->
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+
                 <div
                   ref="el => cards.push(el!)"
-                  class="p-4 glass rounded-2xl flex gap-4 "
+                  class="p-4 glass rounded-2xl flex gap-4"
                 >
                   <div class="bg-red-500/20 p-2 rounded-lg">
                     <Terminal class="text-red-500 w-5 h-5" />
@@ -133,7 +146,7 @@ onMounted(() => {
 
                 <div
                   ref="el => cards.push(el!)"
-                  class="p-4 glass rounded-2xl flex gap-4 "
+                  class="p-4 glass rounded-2xl flex gap-4"
                 >
                   <div class="bg-blue-500/20 p-2 rounded-lg">
                     <Cpu class="text-blue-500 w-5 h-5" />
@@ -148,7 +161,7 @@ onMounted(() => {
 
                 <div
                   ref="el => cards.push(el!)"
-                  class="p-4 glass rounded-2xl flex gap-4 "
+                  class="p-4 glass rounded-2xl flex gap-4"
                 >
                   <div class="bg-purple-500/20 p-2 rounded-lg">
                     <Layers class="text-purple-500 w-5 h-5" />
@@ -160,14 +173,16 @@ onMounted(() => {
                     </p>
                   </div>
                 </div>
+
               </div>
 
               <p
                 ref="el => paragraphs.push(el!)"
-                class="text-slate-500 italic pt-6 "
+                class="text-slate-500 italic pt-6"
               >
                 Mi objetivo es crear software que funcione hoy, escale mañana y sea fácil de mantener siempre.
               </p>
+
             </div>
           </div>
         </div>
