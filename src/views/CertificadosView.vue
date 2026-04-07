@@ -163,7 +163,7 @@ const statsData=[
   { icon: Award,label: 'Certificaciones',value: '6' },
   { icon: Medal,label: 'Insignias',value: '3' },
   { icon: FileText,label: 'Cursos Completados',value: '6' },
-  { icon: Star,label: 'Años de estudio',value: '4' }
+  { icon: Star,label: 'Años de estudio',value: '8' }
 ]
 
 const getPdfUrl=(pdfPath: string) => {
@@ -196,7 +196,7 @@ const getPdfUrl=(pdfPath: string) => {
               ref="title"
               class="text-5xl font-bold text-white mb-6"
             >
-              Certificaciones <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Profesionales</span>
+              Certificaciones
             </h2>
 
             <p

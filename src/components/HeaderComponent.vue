@@ -45,6 +45,12 @@ const closeMenu=() => {
           >
             Certificados
           </router-link>
+          <router-link
+            to="/experiencia/laboral"
+            class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+          >
+            Experiencia laboral
+          </router-link>
           <a
             href="mailto:tuemail@ejemplo.com"
             class="bg-white text-slate-950 px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-500 hover:text-white transition-all duration-300"

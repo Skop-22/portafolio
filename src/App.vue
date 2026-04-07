@@ -116,7 +116,7 @@ const setShootingStarRef=(el: HTMLElement,star: ShootingStar) => {
 
 // Generar estrellas estáticas
 const generateStars=() => {
-  const starCount=isMobile.value? 60:200;
+  const starCount=isMobile.value? 60:100;
 
   const newStars=Array.from({ length: starCount }).map((_,i) => {
     const baseSize=Math.random()*2+1;

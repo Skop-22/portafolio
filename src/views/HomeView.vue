@@ -26,7 +26,7 @@ import Header from '../components/HeaderComponent.vue';
             </h1>
 
             <p class="text-lg lg:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Desarrollador Fullstack con +2 años de experiencia. Experto en el ecosistema
+              Desarrollador Fullstack con +2 años de experiencia. Experiencia en el ecosistema
               Laravel, infraestructura Linux y redes MikroTik. Construyo el futuro, bit a bit.
             </p>
 
