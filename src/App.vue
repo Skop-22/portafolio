@@ -147,7 +147,7 @@ const generateShootingStar=() => {
     scale: isMobile.value? 0.6:1,
   };
 
-  const maxStars=isMobile.value? 4:8;
+  const maxStars=isMobile.value? 2:4;
   shootingStars.value=[...shootingStars.value.slice(-maxStars),newShootingStar];
 
   setTimeout(() => {
@@ -157,19 +157,19 @@ const generateShootingStar=() => {
 };
 
 // Actualizar cuando cambie el tamaño de la pantalla
-let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
+let resizeTimeout: ReturnType<typeof setTimeout>|null=null;
 const handleResize=() => {
-  if (resizeTimeout) clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
+  if(resizeTimeout) clearTimeout(resizeTimeout);
+  resizeTimeout=setTimeout(() => {
     isMobile.value=window.innerWidth<768;
     generateStars();
-  }, 150);
+  },150);
 };
 
 onMounted(() => {
   generateStars();
 
-  shootingStarInterval=setInterval(generateShootingStar,isMobile.value? 800:400);
+  shootingStarInterval=setInterval(generateShootingStar,isMobile.value? 2000:2500);
 
   window.addEventListener('resize',handleResize);
 });
