@@ -47,7 +47,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen relative overflow-x-hidden">
+  <div class="min-h-screen relative">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
 
@@ -88,7 +88,7 @@ onMounted(() => {
                 ref="title"
                 class="text-4xl font-bold text-white"
               >
-                Desarrollo aplicaciones completas, de la idea a producción.
+                Sobre mí
               </h2>
 
               <!-- TEXTO -->
@@ -96,36 +96,22 @@ onMounted(() => {
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Soy desarrollador <span class="text-white font-medium">Full Stack</span> con un fuerte enfoque en arquitectura,
-                eficiencia y mantenibilidad. Me gusta escribir código.
+                Soy un <span class="text-white font-medium">apasionado de la programación</span> y de lo lejos que puede llevarnos. Me encanta aprender nuevas tecnologías, y una de mis grandes metas es dominar <span class="text-white">Qt MCU</span>; es fascinante todo lo que se puede lograr con lenguajes como <span class="text-white">C++</span>.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Desarrollo soluciones completas tanto en backend como en frontend: trabajo con
-                <span class="text-white">PHP y Laravel</span> para la lógica de negocio, APIs y bases de datos,
-                y utilizo <span class="text-white">JavaScript, Vue y TypeScript</span> para construir interfaces modernas.
+                Disfruto profundamente estudiar la teoría de la computación: desde <span class="text-white">compiladores, analizadores léxicos y autómatas finitos</span>. Durante mi carrera he desarrollado varios proyectos que me permitieron comprender cómo funcionan los lenguajes de programación internamente.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Manejo <span class="text-white">PHP a nivel avanzado</span>, y tengo experiencia con
-                <span class="text-white">JavaScript y TypeScript</span>. También he trabajado
-                con <span class="text-white">Apache</span> y entornos Linux para despliegue y configuración de aplicaciones.
+                Me resulta increíble el proceso de generación de <span class="text-white">tokens</span> y el manejo de memoria a bajo nivel (cómo se asigna y libera). Incluso el lenguaje <span class="text-white">ensamblador</span>, aunque es bastante complejo, me parece sumamente interesante para comprender qué sucede realmente en la máquina.
               </p>
-
-              <p
-                ref="el => paragraphs.push(el!)"
-                class="text-slate-400 text-lg leading-relaxed"
-              >
-                Además, cuento con conocimientos en otros lenguajes como
-                <span class="text-white">Python, C y C++</span>, principalmente para reforzar lógica y resolver problemas específicos.
-              </p>
-
               <!-- CARDS -->
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
 

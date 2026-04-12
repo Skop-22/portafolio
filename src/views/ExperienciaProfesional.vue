@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen relative overflow-x-hidden">
+  <div class="relative">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
 
@@ -91,19 +91,18 @@ onMounted(() => {
                 <!-- DESCRIPCIÓN -->
                 <div class="space-y-4 text-slate-300 leading-relaxed">
                   <p>
-                    Experiencia sólida trabajando con
-                    <span class="text-white font-medium">Laravel</span> en la creación,
-                    mantenimiento y mejora de aplicaciones en producción.
+                    Como <span class="text-white font-medium">Desarrollador Full Stack</span>, mi principal enfoque fue la
+                    <span class="text-white">creación e implementación de APIs</span> para el núcleo del sistema, así como la
+                    <span class="text-white">integración de pasarelas de pago (IPN, Webhooks)</span>, garantizando transacciones seguras y eficientes.
                   </p>
 
                   <p class="text-slate-400">
-                    Desarrollo de interfaces dinámicas con Vue.js y construcción de
-                    <span class="text-white">APIs REST</span> escalables.
+                    Trabajé intensamente en la visualización, experiencia de usuario y maquetación de proyectos utilizando
+                    <span class="text-white">Bootstrap, JavaScript, HTML y CSS</span>. Ayudé en la creación y mantenimiento de proyectos robustos empleando <span class="text-white">PHP 8.0 a 8.2</span> y frameworks reactivos como <span class="text-white">Livewire</span>.
                   </p>
 
                   <p class="text-slate-400">
-                    Administración de servidores Linux (<span class="text-white">Ubuntu Server</span>),
-                    incluyendo despliegues, migraciones y optimización de servicios.
+                    Además de la programación principal, apoyé en la <span class="text-white">administración integral de MySQL</span> y en la infraestructura de redes. Esto incluye entornos <span class="text-white">Linux (Ubuntu)</span>, configuraciones de túneles <span class="text-white">OpenVPN</span>, y el uso de <span class="text-white">KVM</span> para virtualizar routers <span class="text-white">MikroTik</span> con simulaciones en <span class="text-white">GNS3</span>.
                   </p>
                 </div>
 
@@ -111,16 +110,17 @@ onMounted(() => {
                 <div class="mt-6">
                   <div class="flex items-center gap-2 text-white mb-3">
                     <Sparkles class="w-4 h-4 text-yellow-400" />
-                    Logros clave
+                    Responsabilidades y Logros
                   </div>
 
                   <ul class="text-sm text-slate-400 space-y-2">
-                    <li>• Desarrollo de múltiples APIs REST en producción</li>
-                    <li>• Implementación de sistemas de autenticación segura</li>
-                    <li>• Optimización de rendimiento utilizando Redis</li>
-                    <li>• Configuración y administración de servidores Linux</li>
-                    <li>• Configuración y administración de Pasarelas de pago (Mercado pago, PayPal)</li>
-                    <li>• Implementación de redes VPN y túneles con MikroTik</li>
+                    <li>• Arquitectura e implementación de pasarelas de pago.</li>
+                    <li>• Desarrollo principal de APIs RESTful como núcleo de los sistemas.</li>
+                    <li>• Visualización de proyectos y UI con Bootstrap, JS, HTML y CSS.</li>
+                    <li>• Desarrollo de proyectos interactivos en PHP 8.x junto a Laravel y Livewire.</li>
+                    <li>• Automatización de mensajería usando WhatsApp Business.</li>
+                    <li>• Gestión de infraestructuras Linux (Ubuntu), túneles OpenVPN, y redes MikroTik en GNS3.</li>
+                    <li>• Optimización y mantenimiento integral de bases de datos MySQL.</li>
                   </ul>
                 </div>
 
@@ -131,15 +131,20 @@ onMounted(() => {
                   </h4>
 
                   <div class="flex flex-wrap gap-2">
+                    <span class="tag">PHP 8</span>
                     <span class="tag">Laravel</span>
-                    <span class="tag">PHP</span>
-                    <span class="tag">Vue.js</span>
+                    <span class="tag">Livewire</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">HTML/CSS</span>
                     <span class="tag">MySQL</span>
-                    <span class="tag">Redis</span>
-                    <span class="tag">Ubuntu</span>
-                    <span class="tag">Apache</span>
-                    <span class="tag">OpenVPN</span>
+                    <span class="tag">APIs</span>
+                    <span class="tag">Webhooks</span>
+                    <span class="tag">Linux/Ubuntu</span>
                     <span class="tag">MikroTik</span>
+                    <span class="tag">KVM</span>
+                    <span class="tag">GNS3</span>
+                    <span class="tag">OpenVPN</span>
                   </div>
                 </div>
 

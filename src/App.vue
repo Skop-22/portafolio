@@ -51,7 +51,7 @@
   </div>
 
   <!-- Contenedor del contenido con scroll -->
-  <div class="relative min-h-screen overflow-y-auto overflow-x-hidden z-0">
+  <div class="relative min-h-screen z-0">
     <RouterView />
   </div>
 </template>
@@ -147,7 +147,7 @@ const generateShootingStar=() => {
     scale: isMobile.value? 0.6:1,
   };
 
-  const maxStars=isMobile.value? 2:4;
+  const maxStars=isMobile.value? 4:8;
   shootingStars.value=[...shootingStars.value.slice(-maxStars),newShootingStar];
 
   setTimeout(() => {
@@ -157,15 +157,19 @@ const generateShootingStar=() => {
 };
 
 // Actualizar cuando cambie el tamaño de la pantalla
+let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
 const handleResize=() => {
-  isMobile.value=window.innerWidth<768;
-  generateStars();
+  if (resizeTimeout) clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    isMobile.value=window.innerWidth<768;
+    generateStars();
+  }, 150);
 };
 
 onMounted(() => {
   generateStars();
 
-  shootingStarInterval=setInterval(generateShootingStar,isMobile.value? 1200:900);
+  shootingStarInterval=setInterval(generateShootingStar,isMobile.value? 800:400);
 
   window.addEventListener('resize',handleResize);
 });

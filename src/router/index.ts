@@ -19,9 +19,9 @@ const router = createRouter({
       component: () => import("../views/CertificadosView.vue"),
     },
     {
-      path: "/experiencia/laboral",
-      name: "experiencia.laboral",
-      component: () => import("../views/ExperienciaLaboral.vue"),
+      path: "/experiencia/profesional",
+      name: "experiencia.profesional",
+      component: () => import("../views/ExperienciaProfesional.vue"),
     },
     {
       path: "/:pathMatch(.*)*",

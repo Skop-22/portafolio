@@ -194,7 +194,7 @@ const getPdfUrl=(pdfPath: string) => {
 </script>
 
 <template>
-  <div class="min-h-screen relative overflow-x-hidden">
+  <div class="min-h-screen relative">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-red-500/5 blur-[150px] rounded-full z-0"></div>

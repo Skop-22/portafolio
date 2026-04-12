@@ -3,11 +3,13 @@ import Github from '../components/icons/IconGitHub.vue'
 import Mail from '../components/icons/IconMail.vue'
 import ChevronRight from '../components/icons/IconChevronRigth.vue';
 import Header from '../components/HeaderComponent.vue';
+import { Server } from 'lucide-vue-next';
+import HeroSectionCode from '../components/HeroSectionCode.vue';
 
 </script>
 
 <template>
-  <div class="min-h-screen relative overflow-x-hidden">
+  <div class="min-h-screen relative">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-red-500/10 blur-[120px] rounded-full z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full z-0"></div>
     <Header />
@@ -41,13 +43,13 @@ import Header from '../components/HeaderComponent.vue';
               <div class="flex items-center gap-3">
                 <a
                   href="https://github.com/Skop-22"
-                  class="p-4 rounded-xl glass hover:bg-white/10 transition-colors"
+                  class="p-4 rounded-xl glass hover:bg-white/10 transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
                 >
                   <Github class="w-6 h-6" />
                 </a>
                 <a
                   href="mailto:david.flores.beltran99@gmail.com"
-                  class="p-4 rounded-xl glass hover:bg-white/10 transition-colors"
+                  class="p-4 rounded-xl glass hover:bg-white/10 transition-all duration-300 transform hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
                 >
                   <Mail class="w-6 h-6" />
                 </a>
@@ -55,21 +57,7 @@ import Header from '../components/HeaderComponent.vue';
             </div>
           </div>
 
-          <div class="hidden lg:block relative">
-            <div class="relative z-10 p-8 glass rounded-3xl border-white/10 shadow-2xl">
-              <div class="mono text-sm space-y-2">
-                <p class="text-red-400">class FullStackEngineer {</p>
-                <p class="pl-4 text-blue-400">public $experience = "2+ years";</p>
-                <p class="pl-4 text-blue-400">public $stack = ["Laravel 12", "PHP 8.4", "Vue 3", "MySQL"];</p>
-                <p class="pl-4 text-blue-400">public $infra = ["Arch Linux", "Ubuntu Server", "MikroTik"];</p>
-                <p class="pl-4 text-green-400 mt-4">public function create(Solution $idea) {</p>
-                <p class="pl-8 text-slate-300">return $idea->scale()->secure()->deploy();</p>
-                <p class="pl-4 text-green-400">}</p>
-                <p class="text-red-400">}</p>
-              </div>
-            </div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-red-500/20 blur-[100px] -z-10"></div>
-          </div>
+          <HeroSectionCode />
         </div>
       </section>
     </main>
