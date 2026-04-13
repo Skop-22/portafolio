@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ExternalLink, ArrowRight } from 'lucide-vue-next';
+import { ExternalLink,ArrowRight } from 'lucide-vue-next';
+import basicjs from '../assets/imagenes/basicjs.png'
 
-const projects = [
+const projects=[
   {
     id: 'ecommerce',
     title: 'eCommerce Order Control',
@@ -28,7 +29,7 @@ const projects = [
     id: 'lenguaje',
     title: 'Lenguaje de Programación',
     description: 'Diseño e implementación de un lenguaje de programación propio. Incluye análisis léxico, sintáctico y un motor de ejecución.',
-    image: '/src/assets/imagenes/code.jpeg',
+    image: basicjs,
     link: '/proyectos/lenguaje'
   }
 ];
@@ -66,7 +67,8 @@ const projects = [
               />
               <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <span class="text-white font-semibold flex items-center gap-2">
-                  Ver detalles <ArrowRight class="w-4 h-4" />
+                  Ver detalles
+                  <ArrowRight class="w-4 h-4" />
                 </span>
               </div>
             </div>

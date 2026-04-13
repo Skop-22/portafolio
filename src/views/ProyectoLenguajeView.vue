@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ArrowLeft, Code2, Cpu, Terminal, Zap } from 'lucide-vue-next';
+import { ArrowLeft,Code2,Cpu,Terminal,Zap } from 'lucide-vue-next';
 
-const components = [
+const components=[
   'Lexer: Análisis léxico y tokenización',
   'Parser: Construcción del Árbol de Sintaxis Abstracta (AST)',
   'Evaluador: Entorno de ejecución y manejo de alcance',
@@ -19,7 +19,10 @@ const components = [
     <main class="relative z-10 pt-28 pb-20 px-4">
       <div class="max-w-5xl mx-auto space-y-12">
         <div class="space-y-6">
-          <router-link to="/proyectos" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group">
+          <router-link
+            to="/proyectos"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group"
+          >
             <ArrowLeft class="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Volver a proyectos
           </router-link>
@@ -31,13 +34,11 @@ const components = [
         <div class="glass rounded-3xl overflow-hidden p-2">
           <div class="bg-gray-900 rounded-2xl p-8 mono text-green-400 overflow-x-auto shadow-2xl">
             <pre><code>// Ejemplo de sintaxis del lenguaje
-fun calcularFibo(n) {
-  if (n < 2) return n;
-  return calcularFibo(n - 1) + calcularFibo(n - 2);
-}
-
-let resultado = calcularFibo(10);
-print("Resultado: " + resultado);</code></pre>
+A = 5
+B = 3
+PRINT "Resultado: ", A + B
+IF A > B THEN PRINT "A es mayor"
+END</code></pre>
           </div>
         </div>
 
@@ -56,11 +57,24 @@ print("Resultado: " + resultado);</code></pre>
             <section class="space-y-4">
               <h2 class="text-2xl font-bold text-white">Componentes del compilador</h2>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div v-for="comp in components" :key="comp" class="flex gap-4 p-4 glass rounded-xl">
+                <div
+                  v-for="comp in components"
+                  :key="comp"
+                  class="flex gap-4 p-4 glass rounded-xl"
+                >
                   <div class="bg-red-500/20 p-2 rounded-lg h-fit text-red-500">
-                    <Zap class="w-5 h-5" v-if="comp.includes('Optimización')" />
-                    <Terminal class="w-5 h-5" v-else-if="comp.includes('REPL')" />
-                    <Cpu class="w-5 h-5" v-else />
+                    <Zap
+                      class="w-5 h-5"
+                      v-if="comp.includes('Optimización')"
+                    />
+                    <Terminal
+                      class="w-5 h-5"
+                      v-else-if="comp.includes('REPL')"
+                    />
+                    <Cpu
+                      class="w-5 h-5"
+                      v-else
+                    />
                   </div>
                   <span class="text-slate-300">{{ comp }}</span>
                 </div>
@@ -100,6 +114,6 @@ print("Resultado: " + resultado);</code></pre>
   background-clip: text;
 }
 .mono {
-  font-family: 'Fira Code', 'Courier New', monospace;
+  font-family: "Fira Code", "Courier New", monospace;
 }
 </style>
