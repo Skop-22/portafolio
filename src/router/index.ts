@@ -24,6 +24,31 @@ const router = createRouter({
       component: () => import("../views/ExperienciaProfesional.vue"),
     },
     {
+      path: "/proyectos",
+      name: "proyectos",
+      component: () => import("../views/ProyectosView.vue"),
+    },
+    {
+      path: "/proyectos/ecommerce",
+      name: "proyectos.ecommerce",
+      component: () => import("../views/ProyectoEcommerceView.vue"),
+    },
+    {
+      path: "/proyectos/restaurante",
+      name: "proyectos.restaurante",
+      component: () => import("../views/ProyectoRestauranteView.vue"),
+    },
+    {
+      path: "/proyectos/saas",
+      name: "proyectos.saas",
+      component: () => import("../views/ProyectoSaasView.vue"),
+    },
+    {
+      path: "/proyectos/lenguaje",
+      name: "proyectos.lenguaje",
+      component: () => import("../views/ProyectoLenguajeView.vue"),
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFound.vue"),

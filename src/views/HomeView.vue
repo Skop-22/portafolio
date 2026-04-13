@@ -33,13 +33,13 @@ import HeroSectionCode from '../components/HeroSectionCode.vue';
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href="#projects"
+              <router-link
+                to="/proyectos"
                 class="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 transition-all duration-300 transform hover:scale-105"
               >
                 Ver Proyectos
                 <ChevronRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </router-link>
               <div class="flex items-center gap-3">
                 <a
                   href="https://github.com/Skop-22"

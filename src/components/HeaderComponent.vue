@@ -51,6 +51,12 @@ const closeMenu=() => {
           >
             Experiencia profesional
           </router-link>
+          <router-link
+            to="/proyectos"
+            class="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+          >
+            Proyectos
+          </router-link>
           <a
             href="mailto:david.flores.beltran99@gmail.com"
             class="bg-white text-slate-950 px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-500 hover:text-white transition-all duration-300"
@@ -114,6 +120,14 @@ const closeMenu=() => {
           class="text-lg font-medium text-slate-300 hover:text-white p-3 rounded-lg hover:bg-white/5 transition-colors"
         >
           Experiencia profesional
+        </router-link>
+
+        <router-link
+          to="/proyectos"
+          @click="closeMenu"
+          class="text-lg font-medium text-slate-300 hover:text-white p-3 rounded-lg hover:bg-white/5 transition-colors"
+        >
+          Proyectos
         </router-link>
 
         <a
