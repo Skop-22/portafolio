@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ArrowLeft, CheckCircle2, Globe, Github, Utensils } from 'lucide-vue-next';
+import { ArrowLeft,CheckCircle2,Globe,Github,Utensils } from 'lucide-vue-next';
 
-const features = [
+const features=[
   'Gestión de mesas y estados en tiempo real',
   'Sistema de comandas para cocina',
   'Facturación rápida y división de cuentas',
@@ -19,7 +19,10 @@ const features = [
     <main class="relative z-10 pt-28 pb-20 px-4">
       <div class="max-w-5xl mx-auto space-y-12">
         <div class="space-y-6">
-          <router-link to="/proyectos" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group">
+          <router-link
+            to="/proyectos"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors group"
+          >
             <ArrowLeft class="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Volver a proyectos
           </router-link>
@@ -29,7 +32,11 @@ const features = [
         </div>
 
         <div class="glass rounded-3xl overflow-hidden p-2">
-          <img src="/src/assets/imagenes/proyecto_restaurante.png" alt="Restaurant Project" class="w-full rounded-2xl shadow-2xl" />
+          <img
+            src=""
+            alt="Restaurant Project"
+            class="w-full rounded-2xl shadow-2xl"
+          />
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -47,7 +54,11 @@ const features = [
             <section class="space-y-4">
               <h2 class="text-2xl font-bold text-white">Características clave</h2>
               <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li v-for="feature in features" :key="feature" class="flex items-center gap-3 text-slate-300 bg-white/5 p-4 rounded-xl border border-white/5">
+                <li
+                  v-for="feature in features"
+                  :key="feature"
+                  class="flex items-center gap-3 text-slate-300 bg-white/5 p-4 rounded-xl border border-white/5"
+                >
                   <CheckCircle2 class="w-5 h-5 text-red-500" />
                   {{ feature }}
                 </li>

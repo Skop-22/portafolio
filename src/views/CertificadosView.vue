@@ -2,10 +2,9 @@
 import { onMounted,ref } from 'vue'
 import Header from '../components/HeaderComponent.vue'
 import { animate,stagger } from 'animejs'
-import { Award,Calendar,ExternalLink,FileText,Medal,Star,Download,Eye,Maximize2,X } from 'lucide-vue-next'
+import { Award,Calendar,ExternalLink,FileText,Medal,Star,Download,Eye,X } from 'lucide-vue-next'
 
 // Tus importaciones exactas
-import front_end from '../assets/sertificados/143304d7-33a9-4732-a210-d633438e874d_certificado.pdf'
 import logica_programacion from '../assets/sertificados/75a19bc3-8bc2-4869-b363-2d550ed33edc_certificado.pdf'
 import introduccion from '../assets/sertificados/8e1c9c2c-3a58-4818-8903-dc43c6a809a8_certificado.pdf'
 import salud_digital from '../assets/sertificados/a2b4b846-42ab-4295-b0bd-167b73561201_certificado.pdf'
@@ -87,18 +86,6 @@ const closeModal=() => {
 }
 
 const certificatesData=[
-  {
-    id: 1,
-    title: 'Desarrollador Front-end',
-    issuer: 'Capacítate para el empleo',
-    date: '2022',
-    credentialId: '143304D7-33A9-4732-A210-D633438E874D',
-    pdfPath: front_end,
-    skills: ['HTML','CSS','Javascript'],
-    featured: true,
-    fileSize: '2.0 MB',
-    pages: 1
-  },
   {
     id: 2,
     title: 'Lógica de programación',
@@ -295,13 +282,6 @@ const getPdfUrl=(pdfPath: string) => {
                       title="Abrir en nueva pestaña"
                     >
                       <Eye class="w-5 h-5 text-white" />
-                    </button>
-                    <button
-                      @click="openModal(cert.pdfPath)"
-                      class="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-colors"
-                      title="Vista previa completa"
-                    >
-                      <Maximize2 class="w-5 h-5 text-white" />
                     </button>
                     <button
                       @click="downloadPDF(cert.pdfPath, `${cert.title}.pdf`)"

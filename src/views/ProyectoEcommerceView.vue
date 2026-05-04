@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ArrowLeft, CheckCircle2, ChevronRight, Globe, Github } from 'lucide-vue-next';
+import { ArrowLeft,CheckCircle2,ChevronRight,Globe,Github } from 'lucide-vue-next';
 
-const features = [
+const features=[
   'Gestión de pedidos en tiempo real',
   'Integración con múltiples pasarelas de pago',
   'Panel de administración avanzado con estadísticas',
@@ -36,7 +36,7 @@ const features = [
         <!-- Imagen Principal -->
         <div class="glass rounded-3xl overflow-hidden p-2">
           <img
-            src="/src/assets/imagenes/proyecto_ecommerce.png"
+            src=""
             alt="Ecommerce Project"
             class="w-full rounded-2xl shadow-2xl"
           />
@@ -48,12 +48,12 @@ const features = [
             <section class="space-y-4">
               <h2 class="text-2xl font-bold text-white">Sobre el proyecto</h2>
               <p class="text-slate-400 text-lg leading-relaxed">
-                Este sistema fue diseñado para centralizar la operación de tiendas en línea de alto volumen. 
-                Permite a los administradores rastrear cada pedido desde la compra hasta la entrega final, 
+                Este sistema fue diseñado para centralizar la operación de tiendas en línea de alto volumen.
+                Permite a los administradores rastrear cada pedido desde la compra hasta la entrega final,
                 optimizando los procesos logísticos y mejorando la satisfacción del cliente.
               </p>
               <p class="text-slate-400 text-lg leading-relaxed">
-                Desarrollado con un enfoque en la escalabilidad y la seguridad, utilizando las mejores 
+                Desarrollado con un enfoque en la escalabilidad y la seguridad, utilizando las mejores
                 prácticas de Laravel para asegurar un rendimiento óptimo bajo carga.
               </p>
             </section>

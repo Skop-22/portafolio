@@ -7,8 +7,6 @@ const components=[
   'Parser: Construcción del Árbol de Sintaxis Abstracta (AST)',
   'Evaluador: Entorno de ejecución y manejo de alcance',
   'REPL: Interfaz interactiva de línea de comandos',
-  'Optimización: Eliminación de código muerto y simplificación',
-  'Tipado: Sistema de tipos estáticos básico'
 ];
 </script>
 
@@ -50,7 +48,7 @@ END</code></pre>
                 Este proyecto nace de la curiosidad por entender cómo funcionan realmente las herramientas que usamos a diario. Es la implementación de un lenguaje interpretado con una sintaxis familiar pero con reglas personalizadas.
               </p>
               <p class="text-slate-400 text-lg leading-relaxed">
-                El motor está escrito íntegramente en C++ para maximizar el rendimiento de la evaluación de expresiones y el manejo de memoria durante el recorrido del AST.
+                El motor está escrito íntegramente en typescript para maximizar el rendimiento de la evaluación de expresiones y el manejo de memoria durante el recorrido del AST.
               </p>
             </section>
 
