@@ -15,7 +15,7 @@ const closeMenu=() => {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
@@ -96,7 +96,7 @@ const closeMenu=() => {
     >
       <div
         v-if="isMenuOpen"
-        class="md:hidden glass border-b border-white/10 p-4 absolute top-16 left-0 right-0 flex flex-col gap-2"
+        class="md:hidden bg-slate-950 border-b border-white/10 p-4 absolute top-16 left-0 right-0 flex flex-col gap-2 shadow-2xl"
       >
         <router-link
           to="/sobre-mi"
