@@ -1,15 +1,31 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
 import Header from '../components/HeaderComponent.vue';
-import { ArrowLeft,CheckCircle2,ChevronRight,Globe,Github } from 'lucide-vue-next';
+import { ArrowLeft,CheckCircle2,ChevronRight,ChevronLeft,Globe,Github } from 'lucide-vue-next';
 
 const features=[
   'Gestión de pedidos en tiempo real',
-  'Integración con múltiples pasarelas de pago',
+  'Websockets con Reverb Laravel para actualizaciones instantáneas',
   'Panel de administración avanzado con estadísticas',
   'Control de inventario automatizado',
   'Notificaciones por correo electrónico y SMS',
   'Diseño responsivo para móviles y tablets'
 ];
+
+const currentSlide=ref(0);
+const slides=[
+  { title: 'Página de Inicio',alt: 'Inicio - Orden Master',image: '' },
+  { title: 'Panel del Cliente',alt: 'Cliente - Orden Master',image: '' },
+  { title: 'Panel del Administrador',alt: 'Admin - Orden Master',image: '' }
+];
+
+const nextSlide=() => {
+  currentSlide.value=(currentSlide.value+1)%slides.length;
+};
+
+const prevSlide=() => {
+  currentSlide.value=(currentSlide.value-1+slides.length)%slides.length;
+};
 </script>
 
 <template>
@@ -29,17 +45,61 @@ const features=[
           </router-link>
 
           <h1 class="text-4xl lg:text-6xl font-extrabold text-white tracking-tight">
-            eCommerce <span class="gradient-text">Order Control</span>
+            Orden <span class="gradient-text">Master</span>
           </h1>
         </div>
 
-        <!-- Imagen Principal -->
-        <div class="glass rounded-3xl overflow-hidden p-2">
-          <img
-            src=""
-            alt="Ecommerce Project"
-            class="w-full rounded-2xl shadow-2xl"
-          />
+        <!-- Carrusel del Proyecto -->
+        <div class="relative group">
+          <div class="glass rounded-3xl overflow-hidden p-2 aspect-video relative">
+            <div
+              class="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900"
+            >
+              <transition-group name="fade">
+                <div
+                  v-for="(slide, index) in slides"
+                  v-show="currentSlide === index"
+                  :key="index"
+                  class="absolute inset-0"
+                >
+                  <img
+                    :src="slide.image"
+                    :alt="slide.alt"
+                    class="w-full h-full object-cover"
+                  />
+                  <!-- Overlay de título -->
+                  <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                    <p class="text-white font-bold text-xl uppercase tracking-widest">{{ slide.title }}</p>
+                  </div>
+                </div>
+              </transition-group>
+            </div>
+
+            <!-- Controles -->
+            <button
+              @click="prevSlide"
+              class="absolute left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500"
+            >
+              <ChevronLeft class="w-6 h-6" />
+            </button>
+            <button
+              @click="nextSlide"
+              class="absolute right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500"
+            >
+              <ChevronRight class="w-6 h-6" />
+            </button>
+
+            <!-- Indicadores -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              <button
+                v-for="(_, index) in slides"
+                :key="index"
+                @click="currentSlide = index"
+                class="w-2 h-2 rounded-full transition-all"
+                :class="currentSlide === index ? 'bg-red-500 w-6' : 'bg-white/30 hover:bg-white/50'"
+              ></button>
+            </div>
+          </div>
         </div>
 
         <!-- Información del Proyecto -->
@@ -79,8 +139,9 @@ const features=[
               <div>
                 <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Tecnologías</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20">Laravel</span>
-                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">Vue.js</span>
+                  <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20">Laravel 11</span>
+                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">Vue.js 3</span>
+                  <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-500 text-xs font-bold border border-purple-500/20">Reverb</span>
                   <span class="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-bold border border-yellow-500/20">MySQL</span>
                   <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-500 text-xs font-bold border border-sky-500/20">TailwindCSS</span>
                 </div>
@@ -96,10 +157,11 @@ const features=[
                   <Globe class="w-4 h-4" />
                   Ver Demo Live
                 </button>
-                <button class="w-full glass text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                  <Github class="w-4 h-4" />
-                  Ver Repositorio
-                </button>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                  <p class="text-xs text-slate-500 italic text-center">
+                    El repositorio de este proyecto es privado y el código no está disponible públicamente.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -115,5 +177,15 @@ const features=[
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

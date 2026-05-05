@@ -96,22 +96,23 @@ onMounted(() => {
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Soy un <span class="text-white font-medium">apasionado de la programación</span> y de lo lejos que puede llevarnos. Me encanta aprender nuevas tecnologías, y una de mis grandes metas es dominar <span class="text-white">Qt MCU</span>; es fascinante todo lo que se puede lograr con lenguajes como <span class="text-white">C++</span>.
+                ¡Hola! Soy un <span class="text-white font-medium">apasionado de la programación</span> y el desarrollo de software. Actualmente, cuento con sólidos conocimientos en la creación de aplicaciones web, especializándome en el <span class="text-white">backend con Laravel</span> y en el <span class="text-white">frontend con Vue 3</span>.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Disfruto profundamente estudiar la teoría de la computación: desde <span class="text-white">compiladores, analizadores léxicos y autómatas finitos</span>. Durante mi carrera he desarrollado varios proyectos que me permitieron comprender cómo funcionan los lenguajes de programación internamente.
+                Mi fascinación por el desarrollo comenzó en la universidad, donde materias como <span class="text-white">Estructura de Datos</span> y <span class="text-white">Compiladores</span> despertaron mi interés por entender cómo funcionan internamente los lenguajes de programación. Me apasiona el reto de construir herramientas eficientes y elegantes.
               </p>
 
               <p
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-400 text-lg leading-relaxed"
               >
-                Me resulta increíble el proceso de generación de <span class="text-white">tokens</span> y el manejo de memoria a bajo nivel (cómo se asigna y libera). Incluso el lenguaje <span class="text-white">ensamblador</span>, aunque es bastante complejo, me parece sumamente interesante para comprender qué sucede realmente en la máquina.
+                Aquí presento un <router-link to="/proyectos/lenguaje" class="text-white font-medium underline decoration-red-500/50 hover:decoration-red-500 transition-all">pequeño proyecto personal</router-link> desarrollado con <span class="text-white">Vue 3</span>, <span class="text-white">Tailwind CSS</span> y <span class="text-white">TypeScript</span>.
               </p>
+
               <!-- CARDS -->
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
 
@@ -166,7 +167,7 @@ onMounted(() => {
                 ref="el => paragraphs.push(el!)"
                 class="text-slate-500 italic pt-6"
               >
-                Mi objetivo es crear software que funcione hoy, escale mañana y sea fácil de mantener siempre.
+                "Mi objetivo es crear software que funcione hoy, escale mañana y sea fácil de mantener siempre."
               </p>
 
             </div>
