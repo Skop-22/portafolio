@@ -2,6 +2,9 @@
 import { ref } from 'vue';
 import Header from '../components/HeaderComponent.vue';
 import { ArrowLeft,CheckCircle2,ChevronRight,ChevronLeft,Globe,Github } from 'lucide-vue-next';
+import home from '../assets/imagenes/home_orden_master.png';
+import cliente from '../assets/imagenes/orden_master_cliente.png'
+import admin from '../assets/imagenes/orden_master_admin.png'
 
 const features=[
   'Gestión de pedidos en tiempo real',
@@ -14,9 +17,9 @@ const features=[
 
 const currentSlide=ref(0);
 const slides=[
-  { title: 'Página de Inicio',alt: 'Inicio - Orden Master',image: '' },
-  { title: 'Panel del Cliente',alt: 'Cliente - Orden Master',image: '' },
-  { title: 'Panel del Administrador',alt: 'Admin - Orden Master',image: '' }
+  { title: 'Página de Inicio',alt: 'Inicio - Orden Master',image: home },
+  { title: 'Panel del Cliente',alt: 'Cliente - Orden Master',image: cliente },
+  { title: 'Panel del Administrador',alt: 'Admin - Orden Master',image: admin }
 ];
 
 const nextSlide=() => {
@@ -52,9 +55,7 @@ const prevSlide=() => {
         <!-- Carrusel del Proyecto -->
         <div class="relative group">
           <div class="glass rounded-3xl overflow-hidden p-2 aspect-video relative">
-            <div
-              class="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900"
-            >
+            <div class="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900">
               <transition-group name="fade">
                 <div
                   v-for="(slide, index) in slides"
@@ -153,10 +154,14 @@ const prevSlide=() => {
               </div>
 
               <div class="pt-6 border-t border-white/5 space-y-3">
-                <button class="w-full bg-white text-slate-950 px-6 py-3 rounded-xl font-bold hover:bg-red-500 hover:text-white transition-all flex items-center justify-center gap-2">
+                <a
+                  class="w-full bg-white text-slate-950 px-6 py-3 rounded-xl font-bold hover:bg-red-500 hover:text-white transition-all flex items-center justify-center gap-2"
+                  href="https://order-msh.vercel.app"
+                  target="_blank"
+                >
                   <Globe class="w-4 h-4" />
                   Ver Demo Live
-                </button>
+                </a>
                 <div class="p-4 bg-white/5 rounded-xl border border-white/10">
                   <p class="text-xs text-slate-500 italic text-center">
                     El repositorio de este proyecto es privado y el código no está disponible públicamente.

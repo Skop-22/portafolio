@@ -2,6 +2,9 @@
 import { ref } from 'vue';
 import Header from '../components/HeaderComponent.vue';
 import { ArrowLeft,CheckCircle2,Globe,Github,Utensils,ChevronLeft,ChevronRight } from 'lucide-vue-next';
+import home from '../assets/imagenes/home_ya_pedi.png';
+import cliente from '../assets/imagenes/ya_pedi_cliente.png';
+import admin from '../assets/imagenes/ya_pedi_admin.png'
 
 const features=[
   'Gestión de mesas y estados en tiempo real',
@@ -14,9 +17,9 @@ const features=[
 
 const currentSlide=ref(0);
 const slides=[
-  { title: 'Página de Inicio',alt: 'Inicio - Restaurant Ya Pedi',image: '' },
-  { title: 'Panel del Cliente',alt: 'Cliente - Restaurant Ya Pedi',image: '' },
-  { title: 'Panel del Administrador',alt: 'Admin - Restaurant Ya Pedi',image: '' }
+  { title: 'Página de Inicio',alt: 'Inicio - Restaurant Ya Pedi',image: home },
+  { title: 'Panel del Cliente',alt: 'Cliente - Restaurant Ya Pedi',image: cliente },
+  { title: 'Panel del Administrador',alt: 'Admin - Restaurant Ya Pedi',image: admin }
 ];
 
 const nextSlide=() => {
@@ -50,9 +53,7 @@ const prevSlide=() => {
         <!-- Carrusel del Proyecto -->
         <div class="relative group">
           <div class="glass rounded-3xl overflow-hidden p-2 aspect-video relative">
-            <div
-              class="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900"
-            >
+            <div class="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900">
               <transition-group name="fade">
                 <div
                   v-for="(slide, index) in slides"
@@ -133,7 +134,7 @@ const prevSlide=() => {
                 <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Tecnologías</h3>
                 <div class="flex flex-wrap gap-2">
                   <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20">Laravel 11</span>
-                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">Vue.js 3</span>
+                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">Vue3</span>
                   <span class="px-3 py-1 rounded-full bg-blue-400/10 text-blue-400 text-xs font-bold border border-blue-400/20">TypeScript</span>
                   <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-500 text-xs font-bold border border-purple-500/20">Reverb</span>
                   <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-500 text-xs font-bold border border-sky-500/20">TailwindCSS</span>

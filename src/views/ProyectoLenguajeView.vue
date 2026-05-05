@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ArrowLeft,Code2,Cpu,Terminal,Zap } from 'lucide-vue-next';
+import { ArrowLeft,Code2,Cpu,Terminal,Zap,Github,Globe } from 'lucide-vue-next';
+
 
 const components=[
   'Lexer: Análisis léxico y tokenización',
@@ -85,16 +86,28 @@ END</code></pre>
               <div>
                 <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Tecnologías</h3>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">C++ 20</span>
-                  <span class="px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20">CMake</span>
+                  <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold border border-blue-500/20">TypeScript</span>
+                  <span class="px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20">Vue3</span>
                   <span class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20">Google Test</span>
                 </div>
               </div>
               <div class="pt-6 border-t border-white/5 space-y-3">
-                <button class="w-full glass text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                  <Code2 class="w-4 h-4" />
-                  Explorar Gramática
-                </button>
+                <a
+                  href="https://github.com/Skop-22/lenguajes_de_programacion"
+                  target="_blank"
+                  class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl glass text-white text-sm font-bold hover:bg-white/10 transition-all border border-white/10"
+                >
+                  <Github class="w-4 h-4" />
+                  GitHub
+                </a>
+                <a
+                  href="https://lenguajes-de-programacion.vercel.app/"
+                  target="_blank"
+                  class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white text-slate-950 text-sm font-bold hover:bg-red-500 hover:text-white transition-all"
+                >
+                  <Globe class="w-4 h-4" />
+                  Demo
+                </a>
               </div>
             </div>
           </div>

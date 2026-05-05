@@ -1,26 +1,28 @@
 <script lang="ts" setup>
 import Header from '../components/HeaderComponent.vue';
-import { ExternalLink, ArrowRight, Github, Globe, Lock } from 'lucide-vue-next';
+import { ExternalLink,ArrowRight,Github,Globe,Lock } from 'lucide-vue-next';
 import basicjs from '../assets/imagenes/basicjs.png'
+import ecommerce from '../assets/imagenes/home_orden_master.png'
+import ya_pedi from '../assets/imagenes/home_ya_pedi.png'
 
 const projects=[
   {
     id: 'ecommerce',
     title: 'Orden Master',
     description: 'Sistema integral para la gestión de pedidos, clientes e inventario con WebSockets (Reverb) y Laravel 11.',
-    image: '/src/assets/imagenes/proyecto_ecommerce.png',
+    image: ecommerce,
     link: '/proyectos/ecommerce',
     isPrivate: true,
-    demo: '#'
+    demo: 'https://order-msh.vercel.app'
   },
   {
     id: 'restaurante',
     title: 'Restaurant Ya Pedi System',
     description: 'Control de pedidos y mesas en tiempo real con Laravel 11, Vue 3 y WebSockets.',
-    image: '/src/assets/imagenes/proyecto_restaurante.png',
+    image: ya_pedi,
     link: '/proyectos/restaurante',
     isPrivate: true,
-    demo: '#'
+    demo: 'https://ya-pedi.vercel.app'
   },
   {
     id: 'saas',
@@ -69,7 +71,10 @@ const projects=[
             class="group relative glass rounded-3xl overflow-hidden p-4 transition-all duration-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.15)] flex flex-col"
           >
             <!-- Imagen con Overlay de Detalles -->
-            <router-link :to="project.link" class="aspect-video rounded-2xl overflow-hidden mb-6 relative block">
+            <router-link
+              :to="project.link"
+              class="aspect-video rounded-2xl overflow-hidden mb-6 relative block"
+            >
               <img
                 :src="project.image"
                 :alt="project.title"
@@ -89,8 +94,14 @@ const projects=[
                 <h2 class="text-2xl font-bold text-white group-hover:text-red-500 transition-colors">
                   {{ project.title }}
                 </h2>
-                <Lock v-if="project.isPrivate" class="w-4 h-4 text-slate-600" />
-                <ExternalLink v-else class="w-4 h-4 text-slate-600" />
+                <Lock
+                  v-if="project.isPrivate"
+                  class="w-4 h-4 text-slate-600"
+                />
+                <ExternalLink
+                  v-else
+                  class="w-4 h-4 text-slate-600"
+                />
               </div>
               <p class="text-slate-400 leading-relaxed line-clamp-2 text-sm">
                 {{ project.description }}
@@ -105,9 +116,9 @@ const projects=[
                   <Lock class="w-3 h-3" />
                   Repositorio Privado
                 </div>
-                <a 
+                <a
                   v-if="project.demo"
-                  :href="project.demo" 
+                  :href="project.demo"
                   target="_blank"
                   class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white text-slate-950 text-sm font-bold hover:bg-red-500 hover:text-white transition-all shadow-lg"
                 >
@@ -118,18 +129,18 @@ const projects=[
 
               <!-- Caso: Público -->
               <template v-else>
-                <a 
+                <a
                   v-if="project.github"
-                  :href="project.github" 
+                  :href="project.github"
                   target="_blank"
                   class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl glass text-white text-sm font-bold hover:bg-white/10 transition-all border border-white/10"
                 >
                   <Github class="w-4 h-4" />
                   GitHub
                 </a>
-                <a 
+                <a
                   v-if="project.demo"
-                  :href="project.demo" 
+                  :href="project.demo"
                   target="_blank"
                   class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white text-slate-950 text-sm font-bold hover:bg-red-500 hover:text-white transition-all"
                 >
